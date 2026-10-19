@@ -21,8 +21,6 @@ https://github.com/rv-tools/nfer#writing-specifications
 
 
 """
-Nfer_Loto_V1.py
-
 Osnovna ideja:
     Nfer intervalne apstrakcije nad promenama distribucionih
     osobina celih Loto kombinacija.
@@ -87,9 +85,9 @@ except ImportError as exc:
 
 
 DEFAULT_FILES = (
-    "/Users/4c/Desktop/GHQ/data/loto7_4704_k83.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4704_k83_loto_2974.csv",
-    "/Users/4c/Desktop/GHQ/data/loto7_4704_k83_loto_plus_1730.csv",
+    "/data/loto7_4704_k83.csv",
+    "/data/loto7_4704_k83_loto_2974.csv",
+    "/data/loto7_4704_k83_loto_plus_1730.csv",
 )
 
 CALIBRATION = 128
@@ -877,7 +875,7 @@ Intervalni operatori + kernel-regresija odnosa parova.
 Bez random postupaka i klasifikatora.
 Tri nezavisna CSV-a; jedna završna kombinacija po CSV-u.
 Ulazni redosled: najstarije → najnovije.
-Program ne menja i ne zapisuje fajlove.
+
 
 ============================================================================
 loto7_4704_k83.csv
@@ -940,13 +938,15 @@ Prognoze sa 5+ uzastopnih: 0
 Prognoze potpuno u jednoj polovini: 0
 
 4. Finalni NEXT iz svih istorijskih prelaza
-FINALNI NEXT: 8, 11, 22, 23, 26, 33, 34
+FINALNI NEXT: 8, x, 22, y, 26, z, 34
 Modelski skor: 0.68771283
 Upotrebljenih istorijskih prelaza: 4703
 Efektivni broj ponderisanih primera: 4607.58
 Najduži uzastopni niz: 2
 Brojeva 1..19 / 20..39: 2 / 5
 Pretraga je deterministička i heuristička; nije iscrpno pregledanje svih kombinacija.
+
+
 
 ============================================================================
 loto7_4704_k83_loto_2974.csv
@@ -1005,13 +1005,15 @@ Prognoze sa 5+ uzastopnih: 0
 Prognoze potpuno u jednoj polovini: 4
 
 4. Finalni NEXT iz svih istorijskih prelaza
-FINALNI NEXT: 8, 10, 21, 22, 23, 34, 38
+FINALNI NEXT: 8, x, 21, y, 23, z, 38
 Modelski skor: 0.69679747
 Upotrebljenih istorijskih prelaza: 2973
 Efektivni broj ponderisanih primera: 2760.24
 Najduži uzastopni niz: 3
 Brojeva 1..19 / 20..39: 2 / 5
 Pretraga je deterministička i heuristička; nije iscrpno pregledanje svih kombinacija.
+
+
 
 ============================================================================
 loto7_4704_k83_loto_plus_1730.csv
@@ -1068,7 +1070,7 @@ Prognoze sa 5+ uzastopnih: 0
 Prognoze potpuno u jednoj polovini: 0
 
 4. Finalni NEXT iz svih istorijskih prelaza
-FINALNI NEXT: 7, 8, 11, 23, 27, 35, 37
+FINALNI NEXT: 7, x, 11, y, 27, z, 37
 Modelski skor: 0.71537667
 Upotrebljenih istorijskih prelaza: 1729
 Efektivni broj ponderisanih primera: 1710.07
@@ -1076,11 +1078,12 @@ Najduži uzastopni niz: 2
 Brojeva 1..19 / 20..39: 3 / 4
 Pretraga je deterministička i heuristička; nije iscrpno pregledanje svih kombinacija.
 
+
 ============================================================================
 ZAVRŠNI NEXT PREGLED
-loto7_4704_k83.csv: 8, 11, 22, 23, 26, 33, 34
-loto7_4704_k83_loto_2974.csv: 8, 10, 21, 22, 23, 34, 38
-loto7_4704_k83_loto_plus_1730.csv: 7, 8, 11, 23, 27, 35, 37
+loto7_4704_k83.csv: 8, x, 22, y, 26, z, 34
+loto7_4704_k83_loto_2974.csv: 8, x, 21, y, 23, z, 38
+loto7_4704_k83_loto_plus_1730.csv: 7, x, 11, y, 27, z, 37
 """
 
 
